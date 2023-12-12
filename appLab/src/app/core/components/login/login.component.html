@@ -1,0 +1,24 @@
+<div fxLayout="column" fxLayoutAlign="space-between center">
+    <h1><b>~ BIOTEST ~</b></h1>
+    <h3>Laboratorio Clínico</h3>
+    <img src="../../../../assets/user2.jpg" alt=""><br>
+    <form fxLayout="column">
+        <mat-form-field appearance="outline">
+            <mat-label>Usuario</mat-label>
+            <input matInput id="us" placeholder="Ingrese el Usuario" required>
+            <mat-icon matSuffix>person</mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Contraseña</mat-label>
+            <input id="pw" matInput type="{{hidePassword?'password':'text'}}" placeholder="Ingrese la Contraseña"
+                required>
+
+            <button mat-icon-button type="button" matSuffix (click)="hidePassword = !hidePassword">
+                <mat-icon>{{hidePassword?"visibility_off":"visibility"}}</mat-icon>
+            </button>
+        </mat-form-field>
+        <a class="link" [routerLink]="'/administracion'" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+            <button mat-flat-button color="primary" (click)="validarUsuario()">Iniciar Sesion</button>
+        </a>
+    </form>
+</div>

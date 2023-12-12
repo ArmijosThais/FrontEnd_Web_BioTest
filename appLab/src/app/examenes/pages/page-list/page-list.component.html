@@ -1,0 +1,27 @@
+<lab-title></lab-title>
+<lab-container fxLayout="column" fxFlexAlign="center none">
+    <div class="buscador" fxLayout="row" fxFlexAlign="center none">
+        <mat-form-field appearance="fill">
+            <mat-label>Selecciona una categoría</mat-label>
+            <mat-select [(value)]="selected" [(ngModel)]="search">
+                <mat-option value="">Todas</mat-option>
+                <mat-option value="Hematología">Hematología</mat-option>
+              <mat-option value="Uroanálisis">Uroanálisis</mat-option>
+              <mat-option value="Coprología">Coprología</mat-option>
+              <mat-option value="Química Sanguinea">Química Sanguinea</mat-option>
+              <mat-option value="Serología">Serología</mat-option>
+              <mat-option value="Bacteriología">Bacteriología</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <button mat-mini-fab color="primary" type="button" matSuffix (click)="loadExams()">
+            <mat-icon>search</mat-icon>
+        </button>
+    </div>
+    <div class="table">
+        <perfect-scrollbar class="heightMaxScrollBar">
+            <lab-table [data]="data" [metaDataColumns]="metaDataColumns" id="table">
+            </lab-table>
+        </perfect-scrollbar>
+    <lab-paginator (onChangePage)="changePage($event)" [lenght]="totalRecords"></lab-paginator>
+    </div>
+</lab-container>

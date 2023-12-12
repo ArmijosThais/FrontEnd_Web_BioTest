@@ -1,0 +1,60 @@
+lab-title{
+    width: 100%;
+}
+
+mat-card{
+    padding: 30px;
+}
+
+mat-panel-title{
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.politicas{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container{
+    background-color: white;
+}
+.contactos{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sucursal{
+    width: 460px;
+}
+
+.sucursal img{
+    width: 400px;
+}
+
+h2{
+    color: #2c88b1;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 30px;
+}
+
+h4{
+    color: #2c88b1;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 25px;
+}
+
+mat-icon{
+    color: #2c88b1;
+    margin-right: 15px;
+}
+.contactos p{
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+}
+
+

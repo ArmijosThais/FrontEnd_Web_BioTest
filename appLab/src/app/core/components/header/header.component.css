@@ -1,0 +1,30 @@
+mat-toolbar{
+    background-color: rgb(255, 255, 255);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.titulo{
+    font-size: 35px;
+    font-style: normal;
+    font-stretch: 400;
+    color: #2c88b1;
+}
+
+span{
+    color: rgb(118, 118, 118);
+}
+
+button{
+    border: 3px solid #2c88b1;
+    border-radius: 50px;
+    color: #2c88b1;
+}
+
+.menor{
+    border: none;
+    border-radius: 0px;
+}
+
+.menor:hover{
+    border-bottom: 2px solid #2c88b1;
+}

@@ -1,0 +1,19 @@
+img{
+    width: 30%;
+}
+
+h3, h1{
+    font-family: "Segoe UI";
+}
+
+#us1{
+    height: 100px;
+}
+
+button{
+    border-radius: 10px;
+}
+
+a{
+    padding-left: 50px;
+}

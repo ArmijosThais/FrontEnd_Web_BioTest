@@ -1,0 +1,22 @@
+.container{
+    width: 100%;
+    height: 90vh;
+    background: linear-gradient(to left, transparent, rgb(255, 255, 255)),
+    url(../../../../assets/fondo2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#cuadro{
+    background-color: white;
+    width: 1000px;
+    height: 80%;
+    border-radius: 15px;
+    position: absolute;
+    right: 190px;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}

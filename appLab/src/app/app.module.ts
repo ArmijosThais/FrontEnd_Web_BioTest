@@ -3,6 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CoreModule } from './core/core.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -10,7 +17,13 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CoreModule,
+    BrowserAnimationsModule,
+    MatSidenavModule,
+    FlexLayoutModule,
+    PerfectScrollbarModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

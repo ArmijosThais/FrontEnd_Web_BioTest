@@ -1,0 +1,12 @@
+div{
+    position: fixed;
+    bottom: 100px;
+    right: 60px;
+    z-index: 10000000;
+}
+
+button{
+    border-radius: 50px;
+    background-color: white;
+    height: 50px;
+}

@@ -1,0 +1,25 @@
+<mat-toolbar>
+    <div fxLayout fxLayoutAlign="start center" fxFlex="1 1 auto">
+        <!--        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <mat-icon>menu</mat-icon>
+        </button>-->
+        <b>
+            <p class="titulo">BioTest</p>
+        </b>
+    </div>
+    <div fxLayout fxLayoutAlign="end center" fxFlex="1 1 auto">
+        <button mat-button class="" [matMenuTriggerFor]="menu">
+            <mat-icon>person</mat-icon>
+            <span>{{user}}</span>
+            <mat-icon>keyboard_arrow_down</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <a class="link" [routerLink]="'/'" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+                <button class="menor" mat-menu-item (click)="changeAdmin()">
+                    <mat-icon>{{admin?"login":"logout"}}</mat-icon>
+                    <span>{{admin?"Cerrar Sesión":"Iniciar Sesión"}}</span>
+                </button>
+            </a>
+        </mat-menu>
+    </div>
+</mat-toolbar>

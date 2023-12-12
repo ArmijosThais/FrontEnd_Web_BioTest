@@ -1,0 +1,16 @@
+lab-title{
+    width: 100%;
+}
+lab-container{
+    margin-top: 35px;
+}
+
+.buscador{
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.table{
+    height: 400px;
+}

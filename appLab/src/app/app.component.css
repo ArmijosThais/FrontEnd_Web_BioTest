@@ -1,0 +1,15 @@
+mat-sidenav-content{
+    min-height: 91.3vh;
+}
+
+mat-sidenav{
+    width: fit-content;
+    height: auto;
+    background-color:#2c88b1;
+    border: none;
+    border-top-right-radius: 35px;
+}
+
+
+
+

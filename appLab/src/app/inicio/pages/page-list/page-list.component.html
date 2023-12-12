@@ -1,0 +1,73 @@
+<div class="container">
+    <lab-title></lab-title>
+    <perfect-scrollbar class="heightMaxScrollBar">
+        <div class="fondo">
+            <h2 class="font1">PRIMERO ES TU SALUD</h2>
+            <p class="font2">BioTest te brinda atención de excelencia, operando desde 2002, con personal capacitado y al pendiente de la
+                última tecnología en análisis de Laboratorio Clínico. Siempre para brindarte la mejor atención.</p>
+        </div>
+        <div class="info font2" fxLayout="row" fxFlexAlign="space-around">
+            <mat-card fxFlex="1 1 95%" class="mat-elevation-z5">
+                <img src="../../../../assets/domicilio.png" alt="">
+                <h4>TOMA DE MUESTRAS A DOMICILIO</h4>
+                <p>Prueba nuestro servicio de toma de muestras a domicilio desde tu casa u oficina.</p>
+            </mat-card>
+            <mat-card fxFlex="1 1 95%" class="mat-elevation-z5">
+                <img src="../../../../assets/medicosCapacitados.png" alt="">
+                <h4>MÉDICOS CALIFICADOS</h4>
+                <p>Agregando a esto nuestros certificados de confiabilidad ISO 9001, lo que garantiza tu seguridad.</p>
+            </mat-card>
+            <mat-card fxFlex="1 1 95%" class="mat-elevation-z5">
+                <img src="../../../../assets/servicio24.png" alt="">
+                <h4>SERVICIO 24/7</h4>
+                <p>A través de nuestro sevicio en línea podrás comunicarte con nosotros en cualquier momento.</p>
+            </mat-card>
+        </div><br><br>
+        <h2>ESTAMOS LISTOS PARA SERVIRLE</h2>
+        <h4>Esta es una lista de lo que hacemos, ten en cuenta que no todos los servicios se pueden realizar a domicilio.</h4><br>
+        <div class="examenes" fxFill>
+            <div class="izq">
+                <mat-list>
+                    <mat-list-item>Exámenes de Rutina</mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item>Hematología</mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item>Uroanálisis</mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item>Coprológico</mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item>Química Sanguinea</mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item>Serología</mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item>Bacteriología</mat-list-item>
+                </mat-list><br>
+                <a class="link" [routerLink]="'/examenes'" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+                    <button mat-raised-button color="primary">VER TODOS</button>
+                </a>
+            </div>
+            <img src="../../../../assets/examenes.png" alt="">
+        </div><br><br><br>
+        <h2>SERÁ UN GUSTO ATENDERLE</h2>
+        <div class="servicios" fxLayout="row" fxFlexAlign="space-around">  
+            <mat-card fxFlex="1 1 95%" class="mat-elevation-z5">
+                <mat-icon>trending_up</mat-icon>
+                <h4>ANÁLISIS</h4>
+                <p>ANÁLISIS Con medidas y normas de seguridad en la utilización de materiales e instrumentación de Laboratorio.</p>
+            </mat-card>
+            <mat-card fxFlex="1 1 95%" class="mat-elevation-z5">
+                <mat-icon>whatshot</mat-icon>
+                <h4>ESTRATEGIA</h4>
+                <p>Innovamos para servirle mejor, cada día renovamos nuestro compromiso de garantizar su satisfacción.</p>
+            </mat-card>
+            <mat-card fxFlex="1 1 95%" class="mat-elevation-z5">
+                <mat-icon>folder_open</mat-icon>    
+                <h4>CONSULTAS EN LÍNEA</h4>
+                <p>Revise y descargue sus resultados.</p>
+                <a class="link" [routerLink]="'/resultados'" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+                    <button mat-raised-button color="primary">CONSULTAR <mat-icon>keyboard_arrow_right</mat-icon></button>
+                </a>
+            </mat-card>
+        </div>        
+    </perfect-scrollbar>
+</div>

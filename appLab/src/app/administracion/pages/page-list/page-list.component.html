@@ -1,0 +1,51 @@
+<div fxLayout="column">
+    <lab-title></lab-title>
+    <mat-button-toggle-group name="pagina" value="tabAtenciones">
+        <mat-button-toggle value="tabAtenciones" (change)="sendPath('atenciones')">Atenciones</mat-button-toggle>
+        <mat-button-toggle value="tabPacientes" (change)="sendPath('pacientes')">Pacientes</mat-button-toggle>
+    </mat-button-toggle-group>
+    <div ngSwitch="{{path}}">
+        <lab-page-patients id="page" *ngSwitchCase="'pacientes'"></lab-page-patients>
+        <lab-page-attentions id="page" *ngSwitchCase="'atenciones'"></lab-page-attentions>
+    </div>
+</div>
+
+
+<!--
+    <div fxLayout="row">
+        <mat-list-item class="itemMenu">
+            <a class="link" routerLink="/administracion" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+                <button mat-flat-button fxLayout fxLayoutAlign="start" (click)="sendPath('atenciones')">
+                    <span>Atenciones</span>
+                </button>
+            </a>
+        </mat-list-item>
+        <mat-list-item class="itemMenu">
+            <a class="link" routerLink="/administracion" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+                <button mat-flat-button fxLayout fxLayoutAlign="start" (click)="sendPath('pacientes')">
+                    <span>Pacientes</span>
+                </button>
+            </a>
+        </mat-list-item>
+    </div>
+
+    <mat-toolbar flex fxLayout="start stretch" >
+        <button id="tabPacientes" mat-flat-button (click)="sendPath('pacientes')">Pacientes</button>
+        <button id="tabAtenciones" mat-flat-button (click)="sendPath('atenciones')">Atenciones</button>
+    </mat-toolbar>
+
+
+    <lab-menu-admin></lab-menu-admin>
+    <mat-toolbar flex fxLayout="start stretch">
+    <button mat-flat-button>Cientes</button>
+    <button mat-flat-button>Atenciones</button>
+
+
+    <mat-button-toggle-group name="pagina">
+        <mat-button-toggle value="tabPacientes" >Pacientes</mat-button-toggle>
+        <mat-button-toggle value="tabAtenciones">Atenciones</mat-button-toggle>
+    </mat-button-toggle-group>
+
+</mat-toolbar>
+
+-->

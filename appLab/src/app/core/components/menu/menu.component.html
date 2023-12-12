@@ -1,0 +1,11 @@
+<mat-nav-list fxLayout="column" fxLayoutAlign="start" (mouseover)="toggleExpanded(false)" (mouseleave)="toggleExpanded(true)">
+    <mat-list-item class="itemMenu" *ngFor="let menu of listMenu">
+        <a class="link" [routerLink]="menu.url" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+            <button mat-button fxLayout fxLayoutAlign="start">
+                <img id="normalImg" [src]="menu.icon" alt="">
+                <img id="witheImg" [src]="menu.whiteIcon" alt="">
+                <span>{{text?"":menu.title}}</span>
+            </button>
+        </a>
+    </mat-list-item>
+</mat-nav-list>

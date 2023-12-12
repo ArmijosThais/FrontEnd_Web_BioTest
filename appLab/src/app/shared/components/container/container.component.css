@@ -1,0 +1,9 @@
+.container{
+    margin-right: 10px;
+    height: 525px;
+    width: 100%;
+}
+
+mat-card{
+    height: 100%;
+}

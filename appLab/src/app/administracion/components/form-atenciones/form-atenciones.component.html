@@ -1,0 +1,87 @@
+<mat-toolbar fxLayout fxLayoutAlign="space-between center">
+    <h3>{{title}}</h3>
+    <button mat-icon-button mat-dialog-close>
+        <mat-icon>close</mat-icon>
+    </button>
+</mat-toolbar><br>
+<mat-dialog-content>
+    <form fxLayout="column" [formGroup]="group">
+        <mat-form-field appearance="outline">
+            <mat-label>Paciente</mat-label>
+            <input type="text" matInput formControlName="patient">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Fecha de Atención</mat-label>
+            <input type="date" matInput formControlName="creationDate">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Estado</mat-label>
+            <mat-select formControlName="state">
+                <mat-option value="En Revisión">En Revisión</mat-option>
+                <mat-option value="Disponible">Disponible</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </form><br>
+    <div fxLayout="row" fxFlexAlign="space-around center">
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>Selecciona una categoría</mat-label>
+                <mat-select [(value)]="selected" [(ngModel)]="search">
+                    <mat-option value="">Todas</mat-option>
+                    <mat-option value="Hematología">Hematología</mat-option>
+                    <mat-option value="Uroanálisis">Uroanálisis</mat-option>
+                    <mat-option value="Coprología">Coprología</mat-option>
+                    <mat-option value="Química Sanguinea">Química Sanguinea</mat-option>
+                    <mat-option value="Serología">Serología</mat-option>
+                    <mat-option value="Bacteriología">Bacteriología</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div>
+            <button mat-mini-fab color="primary" type="button" matSuffix (click)="loadExams()">
+                <mat-icon>arrow_forward_ios</mat-icon>
+            </button>
+        </div>
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>Exámen</mat-label>
+                <mat-select [(ngModel)]="selectedValue" name="exm">
+                    <mat-option *ngFor="let examen of todos" [value]="examen.name">
+                        {{examen.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div>
+            <button mat-flat-button color="primary" type="button"
+                (click)="addExam(selectedValue)">Agregar Examen
+            </button>
+        </div>
+    </div>
+    <br>
+    <mat-form-field appearance="outline">
+        <mat-label>Resultado</mat-label>
+        <input type="text" matInput [(ngModel)]="resultado">
+    </mat-form-field><br>
+    <perfect-scrollbar class="heightMaxScrollBar">
+        <lab-table [data]="data" [metaDataColumns]="metaDataColumns" id="table">
+            <ng-container matColumnDef="actions">
+                <th mat-header-cell *matHeaderCellDef class="alignButton"></th>
+                <td mat-cell *matCellDef="let row" fxLayout="row" fxLayoutAlign="center center" >
+                    <button mat-icon-button color="primary" (click)="editResult(row)" matToolTip="EDITAR">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                    <button mat-icon-button color="primary" (click)="delete(row._id)" matToolTip="ELIMINAR">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </td>
+            </ng-container>
+        </lab-table>
+    </perfect-scrollbar>
+    <lab-paginator (onChangePage)="changePage($event)" [lenght]="totalRecords"></lab-paginator>
+    <div fxLayout fxLayoutAlign="end" fxLayoutGap="10px">
+        <button mat-raised-button color="primary" type="button" [disabled]="group.invalid"
+            (click)="save()">Guardar</button>
+        <button mat-raised-button color="accent" type="button" mat-dialog-close>Cancelar</button>
+    </div>
+</mat-dialog-content>

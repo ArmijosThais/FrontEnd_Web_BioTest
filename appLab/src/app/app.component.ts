@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'appLab';
+  title = 'appLAB';
+  expanded = true
+
+  toggleExpanded(expanded:boolean){
+    this.expanded = expanded
+  }
 }

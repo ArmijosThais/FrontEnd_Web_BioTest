@@ -1,0 +1,22 @@
+lab-title{
+    width: 100%;
+}
+
+lab-menu-admin{
+    margin-left: 35px;
+    height: 45px;
+}
+
+mat-button-toggle:hover{
+    border-bottom: 3px solid #2c88b1;
+}
+
+mat-button-toggle-group{
+    border: none;
+    margin-left: 35px;
+}
+
+.mat-button-toggle-checked{
+    border-bottom: 3px solid #2c88b1;
+    background-color: white;
+}

@@ -1,0 +1,19 @@
+<lab-container>
+    <perfect-scrollbar class="heightMaxScrollBar">
+        <lab-table [data]="data" [metaDataColumns]="metaDataColumns" id="table">
+            <ng-container matColumnDef="actions">
+                <th mat-header-cell *matHeaderCellDef class="alignButton"></th>
+                <td mat-cell *matCellDef="let row">
+                    <button mat-icon-button color="primary" (click)="openForm(row)" matToolTip="EDITAR">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                    <button mat-icon-button color="primary" (click)="delete(row._id)" matToolTip="ELIMINAR">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </td>
+            </ng-container>
+        </lab-table>
+    </perfect-scrollbar>
+    <lab-paginator (onChangePage)="changePage($event)" [lenght]="totalRecords"></lab-paginator>
+</lab-container>
+<lab-keypad-button [keypadButtons]="keypadButtons" (onClick)="doAction($event)"></lab-keypad-button>
